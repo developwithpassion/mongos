@@ -7,17 +7,17 @@ class Default < Thor
   include Thor::RakeCompat
   Bundler::GemHelper.install_tasks
 
-  desc "build", "Build expansions-#{Mongos::VERSION}.gem into the pkg directory"
+  desc "build", "Build mongos-#{Mongos::VERSION}.gem into the pkg directory"
   def build
     Rake::Task["build"].execute
   end
 
-  desc "install", "Build and install expansions-#{Mongos::VERSION}.gem into system gems"
+  desc "install", "Build and install mongos-#{Mongos::VERSION}.gem into system gems"
   def install
     Rake::Task["install"].execute
   end
 
-  desc "release", "Create tag v#{Mongos::VERSION} and build and push expansions-#{Mongos::VERSION}.gem to Rubygems"
+  desc "release", "Create tag v#{Mongos::VERSION} and build and push mongos-#{Mongos::VERSION}.gem to Rubygems"
   def release
     Rake::Task["release"].execute
   end
